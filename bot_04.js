@@ -36,10 +36,14 @@ bot.on('voice', ctx => {
 //Evento de Foto
 bot.on('photo', async ctx => {
     const photo = ctx.message.photo
+    const legenda = ctx.message.caption
     console.log(photo)
-    photo.forEach((ft, i) => {
+    
+    for([i, ft] of photo.entries()){
         await ctx.reply(`Foto ${i} tem resolução de ${ft.width}x${ft.height}`)
-    })
+    }
+    
+    ctx.reply(`Legenda: ${legenda}`)
 })
 
 //Evento de Figurinha (Sticker)
