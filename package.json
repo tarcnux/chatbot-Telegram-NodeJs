@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tarcnux/chatbot-Telegram-NodeJs#readme",
   "dependencies": {
+    "axios": "^0.21.0",
     "telegraf": "^3.38.0"
   }
 }
